@@ -6,13 +6,13 @@
 /*   By: digoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:27:08 by digoncal          #+#    #+#             */
-/*   Updated: 2023/01/18 18:45:48 by digoncal         ###   ########.fr       */
+/*   Updated: 2023/01/19 10:08:33 by digoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-static void sig_msg(int pid, char *msg)
+static void	sig_msg(int pid, char *msg)
 {
 	char	c;
 	int		bit;
@@ -32,7 +32,7 @@ static void sig_msg(int pid, char *msg)
 	}
 }
 
-static void confirm(int s)
+static void	confirm(int s)
 {
 	(void)s;
 	ft_printf("\033[1;32mMessage Received\033[0m\n");
@@ -50,7 +50,7 @@ static void	end_msg_signal(pid_t pid)
 	}
 }
 
-int main(int argc, char **argv)
+int	main(int argc, char **argv)
 {
 	pid_t	pid;
 

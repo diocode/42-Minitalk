@@ -6,7 +6,7 @@
 /*   By: digoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/03 10:46:16 by digoncal          #+#    #+#             */
-/*   Updated: 2022/12/05 09:55:23 by digoncal         ###   ########.fr       */
+/*   Updated: 2023/01/19 10:03:03 by digoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,13 +88,13 @@ t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *));
 
 /*------------- Functions (ft_printf)---------------*/
 
-int	ft_printf(const char *str, ...);
+int		ft_printf(const char *str, ...);
 
-int	print_hex(unsigned int nbr, int uplow);
-int	print_unbr(unsigned int nbr);
-int	print_nbr(int nbr);
-int	print_str(char *str);
-int	print_pointer(unsigned long *p);
-int	print_adress(unsigned long p);
+int		print_hex(unsigned int nbr, int uplow);
+int		print_unbr(unsigned int nbr);
+int		print_nbr(int nbr);
+int		print_str(char *str);
+int		print_pointer(unsigned long *p);
+int		print_adress(unsigned long p);
 
 #endif

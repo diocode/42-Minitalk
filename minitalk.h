@@ -6,7 +6,7 @@
 /*   By: digoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/11 10:00:08 by digoncal          #+#    #+#             */
-/*   Updated: 2023/01/11 14:07:41 by digoncal         ###   ########.fr       */
+/*   Updated: 2023/01/19 10:06:11 by digoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 /*---------- LIBRARIES  ----------*/
 
-#include <signal.h>
-#include "libft/libft.h"
+# include <signal.h>
+# include "libft/libft.h"
 
 /*---------- FUNCTIONS  ----------*/
 

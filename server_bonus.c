@@ -6,13 +6,13 @@
 /*   By: digoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/18 13:26:56 by digoncal          #+#    #+#             */
-/*   Updated: 2023/01/18 18:46:39 by digoncal         ###   ########.fr       */
+/*   Updated: 2023/01/19 10:10:32 by digoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "minitalk.h"
 
-static void action(int s, siginfo_t *info, void *content)
+static	void	action(int s, siginfo_t *info, void *content)
 {
 	static char	c;
 	static int	bit;
@@ -36,13 +36,12 @@ static void action(int s, siginfo_t *info, void *content)
 		c = 0;
 		bit = 0;
 	}
-	
 }
 
-int main(void)
+int	main(void)
 {
-	pid_t	pid;
-	struct	sigaction sig;
+	pid_t				pid;
+	struct sigaction	sig;
 
 	pid = getpid();
 	if (pid == -1)

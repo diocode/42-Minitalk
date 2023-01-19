@@ -6,7 +6,7 @@
 /*   By: digoncal <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/10 18:55:47 by digoncal          #+#    #+#             */
-/*   Updated: 2023/01/18 18:53:47 by digoncal         ###   ########.fr       */
+/*   Updated: 2023/01/19 10:07:51 by digoncal         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void	send_msg(int pid, char *msg)
 {
-	char 	c;
+	char	c;
 	int		bit;
 
 	while (*msg)
@@ -40,7 +40,7 @@ int	main(int argc, char **argv)
 	if (argc != 3)
 		exit(1);
 	pid = ft_atoi(argv[1]);
-	if (kill(pid, 0)) 
+	if (kill(pid, 0))
 	{
 		ft_printf("\033[1;31mInvalid PID\033[0m\n");
 		exit(1);
