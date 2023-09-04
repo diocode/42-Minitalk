@@ -12,38 +12,38 @@
 
 CC = cc
 CFLAGS = -Wall -Wextra -Werror
-DEPS = minitalk.h
+DEPS = includes/minitalk.h
 
-SRC_S = server.c
-OBJ_S = server.o
-SRC_C = client.c
-OBJ_C = client.o
+SRC_S = src/server.c
+OBJ_S = src/server.o
+SRC_C = src/client.c
+OBJ_C = src/client.o
 
-BONUS_SR_S = server_bonus.c
-BONUS_OBJ_S = server_bonus.o
-BONUS_SR_C = client_bonus.c
-BONUS_OBJ_C = client_bonus.o
+BONUS_SR_S = src/server_bonus.c
+BONUS_OBJ_S = src/server_bonus.o
+BONUS_SR_C = src/client_bonus.c
+BONUS_OBJ_C = src/client_bonus.o
 
-LIBFT  = libft/libft.a
+LIBFT  = libs/libft/libft.a
 
 all: $(OBJ_S) $(OBJ_C) $(DEPS)
-	$(MAKE) -C ./libft
+	$(MAKE) -C ./libs/libft
 	@$(CC) $(OBJ_S) $(LIBFT)  -o server
 	@$(CC) $(OBJ_C) $(LIBFT) -o client
 
 bonus: $(BONUS_OBJ_C) $(BONUS_OBJ_S) $(DEPS)
-	$(MAKE) -C ./libft
-	@$(CC) $(BONUS_OBJ_S) $(LIBFT)  -o server_b
-	@$(CC) $(BONUS_OBJ_C) $(LIBFT) -o client_b
+	$(MAKE) -C ./libs/libft
+	@$(CC) $(BONUS_OBJ_S) $(LIBFT)  -o server_bonus
+	@$(CC) $(BONUS_OBJ_C) $(LIBFT) -o client_bonus
 
 clean:
-	$(MAKE) clean -C ./libft
+	$(MAKE) clean -C ./libs/libft
 	@rm -rf $(OBJ_C) $(OBJ_S) $(BONUS_OBJ_C) $(BONUS_OBJ_S)
 
 fclean: clean
-	$(MAKE) fclean -C ./libft
-	@rm -rf libft.a server client server_b client_b
+	$(MAKE) fclean -C ./libs/libft
+	@rm -rf libft.a server client server_bonus client_bonus
 
 re: fclean all
-	$(MAKE) re -C ./libft
+	$(MAKE) re -C ./libs/libft
 

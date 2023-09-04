@@ -16,7 +16,7 @@
 /*---------- LIBRARIES  ----------*/
 
 # include <signal.h>
-# include "libft/libft.h"
+# include "../libs/libft/libft.h"
 
 /*---------- FUNCTIONS  ----------*/
 
